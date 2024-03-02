@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:weatherapp/bloc/weather_event.dart';
 import 'package:weatherapp/screens/home_screen.dart';
+import 'package:weatherapp/screens/startpage.dart';
 import 'bloc/weather_bloc.dart';
 
 void main() {

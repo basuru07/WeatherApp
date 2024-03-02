@@ -43,10 +43,25 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
+        leading: Image.asset(
+          'assets/icon.png',
+          width: 30,
+          height: 30,
+        ),
+        title: Text(
+          'CLIMA PREMIUM',
+          style: TextStyle(
+            color: Colors.white, // Set the text color to white
+            fontWeight: FontWeight.bold,
+            fontSize: 18,
+          ),
+        ),
+        centerTitle: true, // Center the text within the AppBar
         systemOverlayStyle: const SystemUiOverlayStyle(
           statusBarBrightness: Brightness.dark,
         ),
       ),
+
       body: Padding(
         padding: const EdgeInsets.fromLTRB(40, 1.2 * kToolbarHeight, 40, 20),
         child: SizedBox(
@@ -114,7 +129,38 @@ class _HomeScreenState extends State<HomeScreen> {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          getWeatherIcon(state.weather.weatherConditionCode!),
+                          const SizedBox(height: 10),
+
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(30.0),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black.withOpacity(0.4), // Shadow color with opacity
+                                  spreadRadius: 8, // Spread radius
+                                  blurRadius: 5, // Blur radius
+                                  offset: Offset(0, 3), // Shadow offset
+                                ),
+                              ],
+                            ),
+                            child: ClipRRect(
+                              child: BackdropFilter(
+                                filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.transparent,
+                                    border: Border.all(
+                                      color: Colors.transparent.withOpacity(0.0), // Border color with opacity
+                                      width: 10.0,
+                                    ),
+                                  ),
+                                  child: getWeatherIcon(state.weather.weatherConditionCode!),
+                                ),
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 5,),
+
                           Center(
                             child: Text(
                               '${state.weather.temperature!.celsius!.round()}°C',
@@ -153,7 +199,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               Row(
                                 children: [
                                   Image.asset(
-                                    'assets/11.png',
+                                    'assets/sunrice.webp',
                                     scale: 8,
                                   ),
                                   const SizedBox(width: 5),
@@ -182,7 +228,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               Row(
                                 children: [
                                   Image.asset(
-                                    'assets/12.png',
+                                    'assets/sunset.webp',
                                     scale: 8,
                                   ),
                                   const SizedBox(width: 5),
