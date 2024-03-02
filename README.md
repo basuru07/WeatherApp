@@ -1,16 +1,17 @@
-# weatherapp
 
-A new Flutter project.
+# Clima Premium (Weather App)
 
-## Getting Started
+Transform your day with Clima Premium, a beautifully crafted weather app that brings elegance and functionality together. Get real-time weather updates with stunning visuals, including temperature, conditions, and sunrise/sunset times. Plan your day efficiently with accurate forecasts and a sleek interface. 
 
-This project is a starting point for a Flutter application.
+ #WeatherApp 
+ #ClimaPremium  
+ #WeatherForecast
+ #FlutterApp
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## User Interfaces
+
+<img src="https://github.com/basuru07/WeatherApp/blob/main/Untitled%20design.png" alt="App User Interfaces" width="600" />
+
+
